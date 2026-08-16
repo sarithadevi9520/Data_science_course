@@ -1,0 +1,6 @@
+f1=open("file1.txt","w+")
+f1.write("W+ erases the content if the file exixt")
+f1.write("\n hiii")
+f1.seek(0)
+print(f1.read())
+f1.close()

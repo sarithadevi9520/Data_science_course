@@ -1,0 +1,2 @@
+W+ erases the content if the file exixt
+ hiii

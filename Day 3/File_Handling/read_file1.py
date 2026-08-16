@@ -1,0 +1,5 @@
+f1=open("file1.txt","r+")
+print(f1.tell())
+print(f1.read())
+f1.write("this is file 1")
+print(f1.tell())
