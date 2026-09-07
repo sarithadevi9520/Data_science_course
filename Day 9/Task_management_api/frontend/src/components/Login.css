@@ -1,0 +1,1002 @@
+/* =========================================================
+   GLOBAL
+========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+}
+
+
+/* =========================================================
+   MAIN LOGIN PAGE
+========================================================= */
+
+.login-page {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  background: #f5f7fb;
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   LEFT SIDE
+========================================================= */
+
+.login-left {
+  width: 52%;
+  min-height: 100vh;
+  padding: 38px 55px 30px;
+  background:
+    linear-gradient(
+      135deg,
+      #10265f 0%,
+      #173b91 50%,
+      #2167dc 100%
+    );
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+
+/* Decorative circle */
+
+.login-left::before {
+  content: "";
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  border: 1px solid rgba(255,255,255,0.10);
+  border-radius: 50%;
+  right: -170px;
+  top: -170px;
+}
+
+
+/* Decorative glow */
+
+.login-left::after {
+  content: "";
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  background: rgba(63, 130, 255, 0.15);
+  left: -220px;
+  bottom: -180px;
+}
+
+
+/* =========================================================
+   BRAND
+========================================================= */
+
+.manage-flow-brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  position: relative;
+  z-index: 2;
+}
+
+
+.brand-logo {
+  width: 52px;
+  height: 52px;
+  border-radius: 13px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(255,255,255,0.13);
+  border: 1px solid rgba(255,255,255,0.22);
+
+  font-size: 17px;
+  font-weight: 800;
+  letter-spacing: 1px;
+
+  box-shadow:
+    0 8px 25px rgba(0,0,0,0.12);
+}
+
+
+.brand-details h2 {
+  margin: 0;
+
+  font-size: 25px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+
+.brand-details span {
+  display: block;
+  margin-top: 3px;
+
+  font-size: 12px;
+  color: rgba(255,255,255,0.72);
+}
+
+
+/* =========================================================
+   LEFT CONTENT
+========================================================= */
+
+.login-left-content {
+  position: relative;
+  z-index: 2;
+
+  max-width: 650px;
+
+  margin-top: 55px;
+}
+
+
+.platform-label {
+  display: inline-block;
+
+  padding: 7px 16px;
+
+  border-radius: 30px;
+
+  border: 1px solid rgba(120,180,255,0.45);
+
+  background: rgba(255,255,255,0.06);
+
+  color: #8fc2ff;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+}
+
+
+.login-left-content h1 {
+  margin: 20px 0 14px;
+
+  font-size: clamp(42px, 4vw, 60px);
+
+  line-height: 1.02;
+
+  font-weight: 800;
+
+  letter-spacing: -1.5px;
+}
+
+
+.login-left-content h1 span {
+  color: #72a9ff;
+}
+
+
+.platform-description {
+  max-width: 610px;
+
+  margin: 0;
+
+  color: rgba(255,255,255,0.82);
+
+  font-size: 16px;
+
+  line-height: 1.65;
+}
+
+
+/* =========================================================
+   SYSTEM PREVIEW
+========================================================= */
+
+.system-preview {
+  margin-top: 28px;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 13px;
+
+  max-width: 650px;
+}
+
+
+/* Individual preview */
+
+.preview-card {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 15px;
+
+  padding: 15px 18px;
+
+  border-radius: 14px;
+
+  background: rgba(255,255,255,0.08);
+
+  border: 1px solid rgba(255,255,255,0.18);
+
+  backdrop-filter: blur(8px);
+
+  transition: 0.2s ease;
+}
+
+
+.preview-card:hover {
+  background: rgba(255,255,255,0.12);
+
+  transform: translateY(-2px);
+}
+
+
+/* Preview icon */
+
+.preview-icon {
+  width: 42px;
+  height: 42px;
+
+  flex-shrink: 0;
+
+  border-radius: 11px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 20px;
+  font-weight: 700;
+}
+
+
+.task-icon {
+  background: rgba(68,145,255,0.25);
+
+  color: #9ac6ff;
+}
+
+
+.employee-icon {
+  background: rgba(124,88,255,0.25);
+
+  color: #c1a9ff;
+}
+
+
+/* Preview content */
+
+.preview-content {
+  min-width: 0;
+}
+
+
+.preview-content h3 {
+  margin: 1px 0 3px;
+
+  font-size: 16px;
+
+  font-weight: 700;
+}
+
+
+.preview-content p {
+  margin: 0 0 7px;
+
+  font-size: 13px;
+
+  color: rgba(255,255,255,0.72);
+}
+
+
+.preview-points {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 5px 18px;
+}
+
+
+.preview-points span {
+  font-size: 11px;
+
+  color: rgba(255,255,255,0.70);
+}
+
+
+/* =========================================================
+   LEFT FOOTER
+========================================================= */
+
+.login-left-footer {
+  position: absolute;
+
+  left: 55px;
+  bottom: 28px;
+
+  z-index: 3;
+
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  color: rgba(255,255,255,0.62);
+
+  font-size: 11px;
+}
+
+
+.footer-line {
+  width: 40px;
+  height: 1px;
+
+  background: rgba(255,255,255,0.45);
+}
+
+
+/* =========================================================
+   RIGHT SIDE
+========================================================= */
+
+.login-right {
+  width: 48%;
+
+  min-height: 100vh;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 30px 55px;
+
+  background:
+    radial-gradient(
+      circle at top right,
+      #ffffff 0%,
+      #f5f7fb 60%,
+      #eef2f8 100%
+    );
+}
+
+
+/* =========================================================
+   LOGIN CARD
+========================================================= */
+
+.login-card {
+  width: 100%;
+  max-width: 570px;
+
+  padding: 38px 44px;
+
+  background: white;
+
+  border-radius: 22px;
+
+  border: 1px solid #e8ebf1;
+
+  box-shadow:
+    0 25px 70px rgba(15, 35, 80, 0.10);
+
+}
+
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.login-heading {
+  margin-bottom: 24px;
+}
+
+
+.secure-label {
+  margin-bottom: 8px;
+
+  color: #2563eb;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: 2px;
+}
+
+
+.login-heading h2 {
+  margin: 0;
+
+  color: #111827;
+
+  font-size: 36px;
+
+  line-height: 1.1;
+
+  font-weight: 800;
+}
+
+
+.login-heading p {
+  margin: 8px 0 0;
+
+  color: #6b7280;
+
+  font-size: 15px;
+}
+
+
+/* =========================================================
+   ERROR
+========================================================= */
+
+.login-error {
+  padding: 11px 14px;
+
+  margin-bottom: 18px;
+
+  border-radius: 9px;
+
+  background: #fff1f2;
+
+  border: 1px solid #fecdd3;
+
+  color: #be123c;
+
+  font-size: 13px;
+
+  font-weight: 500;
+}
+
+
+/* =========================================================
+   INPUT
+========================================================= */
+
+.input-group {
+  margin-bottom: 18px;
+}
+
+
+.input-group label {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: #172033;
+
+  font-size: 13px;
+
+  font-weight: 700;
+}
+
+
+.input-wrapper {
+  position: relative;
+}
+
+
+.input-icon {
+  position: absolute;
+
+  left: 15px;
+
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  font-size: 15px;
+
+  opacity: 0.65;
+
+  pointer-events: none;
+}
+
+
+.input-wrapper input {
+  width: 100%;
+
+  height: 53px;
+
+  padding: 0 16px 0 45px;
+
+  border: 1px solid #d8dee9;
+
+  border-radius: 11px;
+
+  outline: none;
+
+  background: white;
+
+  color: #111827;
+
+  font-size: 14px;
+
+  transition: 0.2s ease;
+}
+
+
+.input-wrapper input::placeholder {
+  color: #9aa5b5;
+}
+
+
+.input-wrapper input:focus {
+  border-color: #3478f6;
+
+  box-shadow:
+    0 0 0 3px rgba(52,120,246,0.10);
+}
+
+
+/* =========================================================
+   ACCESS SECTION
+========================================================= */
+
+.access-section {
+  margin-top: 4px;
+
+  margin-bottom: 21px;
+}
+
+
+.access-heading {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  margin-bottom: 9px;
+}
+
+
+.access-heading label {
+  color: #172033;
+
+  font-size: 13px;
+
+  font-weight: 700;
+}
+
+
+.access-heading span {
+  color: #9aa3b2;
+
+  font-size: 11px;
+}
+
+
+/* =========================================================
+   ACCESS OPTIONS
+========================================================= */
+
+.access-options {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 10px;
+}
+
+
+/* =========================================================
+   ACCESS CARD
+========================================================= */
+
+.access-card {
+  min-height: 72px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 11px 14px;
+
+  border-radius: 12px;
+
+  border: 1px solid #dbe1ea;
+
+  background: white;
+
+  cursor: pointer;
+
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.15s ease;
+}
+
+
+.access-card:hover {
+  border-color: #9bbcf9;
+
+  background: #fafcff;
+
+  transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   SELECTED TASK CARD
+========================================================= */
+
+.access-card.task-selected {
+  border-color: #3478f6;
+
+  background: #f3f7ff;
+
+  box-shadow:
+    0 5px 18px rgba(52,120,246,0.08);
+}
+
+
+/* =========================================================
+   SELECTED EMPLOYEE CARD
+========================================================= */
+
+.access-card.employee-selected {
+  border-color: #7c3aed;
+
+  background: #faf7ff;
+
+  box-shadow:
+    0 5px 18px rgba(124,58,237,0.08);
+}
+
+
+/* =========================================================
+   RADIO
+========================================================= */
+
+.radio {
+  width: 21px;
+  height: 21px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  border: 1.5px solid #aab6c7;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+}
+
+
+.radio-selected {
+  border-color: #3478f6;
+}
+
+
+.employee-radio {
+  border-color: #7c3aed;
+}
+
+
+.radio span {
+  width: 10px;
+  height: 10px;
+
+  border-radius: 50%;
+
+  background: #3478f6;
+}
+
+
+.employee-radio span {
+  background: #7c3aed;
+}
+
+
+/* =========================================================
+   ACCESS ICON
+========================================================= */
+
+.access-icon {
+  width: 42px;
+  height: 42px;
+
+  flex-shrink: 0;
+
+  border-radius: 11px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  font-size: 18px;
+
+  font-weight: 700;
+}
+
+
+.task-access-icon {
+  background: #eaf2ff;
+
+  color: #2563eb;
+}
+
+
+.employee-access-icon {
+  background: #f0eaff;
+
+  color: #6d28d9;
+}
+
+
+/* =========================================================
+   ACCESS TEXT
+========================================================= */
+
+.access-info {
+  min-width: 0;
+}
+
+
+.access-info h3 {
+  margin: 0 0 3px;
+
+  color: #172033;
+
+  font-size: 14px;
+
+  font-weight: 750;
+}
+
+
+.access-info p {
+  margin: 0;
+
+  color: #728096;
+
+  font-size: 11px;
+
+  line-height: 1.4;
+}
+
+
+/* =========================================================
+   LOGIN BUTTON
+========================================================= */
+
+.login-button {
+  width: 100%;
+
+  height: 53px;
+
+  border: none;
+
+  border-radius: 11px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #2563eb,
+      #3478f6
+    );
+
+  color: white;
+
+  font-size: 15px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 10px 25px rgba(37,99,235,0.20);
+
+  transition: 0.2s ease;
+}
+
+
+.login-button:hover {
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 13px 28px rgba(37,99,235,0.27);
+}
+
+
+.login-button:active {
+  transform: translateY(0);
+}
+
+
+.login-button:disabled {
+  opacity: 0.65;
+
+  cursor: not-allowed;
+
+  transform: none;
+}
+
+
+/* =========================================================
+   REGISTER
+========================================================= */
+
+.register-area {
+  margin-top: 20px;
+
+  padding-top: 18px;
+
+  border-top: 1px solid #edf0f4;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  gap: 5px;
+
+  color: #697589;
+
+  font-size: 13px;
+}
+
+
+.register-area button {
+  border: none;
+
+  background: none;
+
+  padding: 0;
+
+  color: #2563eb;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+
+.register-area button:hover {
+  text-decoration: underline;
+}
+
+
+/* =========================================================
+   SECURITY
+========================================================= */
+
+.login-security {
+  margin-top: 14px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 6px;
+
+  color: #9aa4b4;
+
+  font-size: 10px;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1100px) {
+
+  .login-left {
+    width: 50%;
+
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+
+  .login-right {
+    width: 50%;
+
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+
+  .login-left-content h1 {
+    font-size: 45px;
+  }
+
+
+  .login-card {
+    padding: 32px 34px;
+  }
+
+}
+
+
+@media (max-width: 850px) {
+
+  .login-page {
+    overflow: auto;
+  }
+
+
+  .login-left {
+    display: none;
+  }
+
+
+  .login-right {
+    width: 100%;
+
+    min-height: 100vh;
+
+    padding: 25px 20px;
+  }
+
+
+  .login-card {
+    max-width: 520px;
+  }
+
+}
+
+
+@media (max-width: 500px) {
+
+  .login-right {
+    padding: 15px;
+  }
+
+
+  .login-card {
+    padding: 28px 22px;
+
+    border-radius: 16px;
+  }
+
+
+  .login-heading h2 {
+    font-size: 30px;
+  }
+
+
+  .access-card {
+    padding: 10px;
+  }
+
+
+  .access-icon {
+    width: 38px;
+    height: 38px;
+  }
+
+
+  .access-info h3 {
+    font-size: 13px;
+  }
+
+
+  .access-info p {
+    font-size: 10px;
+  }
+
+}

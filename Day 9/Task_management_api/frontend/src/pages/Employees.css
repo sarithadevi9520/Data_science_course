@@ -1,0 +1,277 @@
+.employees-page {
+  width: 100%;
+}
+
+.employee-stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.stat-card {
+  min-width: 0;
+  padding: 16px 18px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  box-sizing: border-box;
+}
+
+.stat-icon {
+  width: 38px;
+  height: 38px;
+  min-width: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 8px;
+  font-size: 18px;
+  background: #f3f4f6;
+}
+
+.stat-card span {
+  display: block;
+  font-size: 12px;
+  color: #6b7280;
+  margin-bottom: 4px;
+  white-space: nowrap;
+}
+
+.stat-card strong {
+  display: block;
+  font-size: 22px;
+  font-weight: 700;
+  color: #111827;
+}
+/* TOOLBAR */
+
+.employee-toolbar {
+  display: flex;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.search-box {
+  flex: 1;
+  height: 46px;
+  background: white;
+  border: 1px solid #dfe3e8;
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  padding: 0 14px;
+}
+
+.search-box > span {
+  color: #6b7280;
+  font-size: 21px;
+  margin-right: 9px;
+}
+
+.search-box input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 13px;
+  color: #172033;
+}
+
+.search-box input::placeholder {
+  color: #9ca3af;
+}
+
+.clear-search {
+  border: none;
+  background: transparent;
+  color: #6b7280;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.add-employee-button {
+  height: 46px;
+  border: none;
+  border-radius: 9px;
+  background: #111827;
+  color: white;
+  padding: 0 18px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.add-employee-button:hover {
+  background: #1f2937;
+}
+
+.add-employee-button span {
+  font-size: 19px;
+}
+
+/* MESSAGES */
+
+.success-message,
+.error-message {
+  padding: 11px 14px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  font-size: 13px;
+}
+
+.success-message {
+  background: #ecfdf5;
+  border: 1px solid #bbf7d0;
+  color: #166534;
+}
+
+.error-message {
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  color: #b91c1c;
+}
+
+/* TABLE */
+
+.employee-table-card {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.table-heading {
+  padding: 19px 20px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.table-heading h2 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.table-heading p {
+  margin: 5px 0 0;
+  color: #6b7280;
+  font-size: 12px;
+}
+
+/* EMPTY */
+
+.table-empty {
+  min-height: 230px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #6b7280;
+}
+
+.table-empty h3 {
+  margin: 10px 0 4px;
+  color: #374151;
+  font-size: 15px;
+}
+
+.table-empty p {
+  margin: 0;
+  font-size: 12px;
+}
+
+.empty-icon {
+  font-size: 28px;
+}
+
+.loading-spinner {
+  width: 28px;
+  height: 28px;
+  border: 3px solid #e5e7eb;
+  border-top-color: #111827;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* MODAL */
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(17, 24, 39, 0.55);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  z-index: 1000;
+}
+
+.employee-modal {
+  width: 100%;
+  max-width: 620px;
+  max-height: 90vh;
+  overflow-y: auto;
+  background: white;
+  border-radius: 14px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.18);
+}
+
+.modal-header {
+  padding: 20px 22px;
+  border-bottom: 1px solid #e5e7eb;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.modal-header h2 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.modal-header p {
+  margin: 5px 0 0;
+  color: #6b7280;
+  font-size: 12px;
+}
+
+.modal-close {
+  border: none;
+  background: transparent;
+  color: #6b7280;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 800px) {
+
+  .employee-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .employee-toolbar {
+    flex-direction: column;
+  }
+
+  .add-employee-button {
+    justify-content: center;
+  }
+
+}

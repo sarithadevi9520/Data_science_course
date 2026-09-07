@@ -1,0 +1,441 @@
+/* ================================= */
+/* EMPLOYEE DASHBOARD */
+/* ================================= */
+
+.employee-dashboard {
+  display: flex;
+  min-height: 100vh;
+  background: #f5f7fa;
+}
+
+
+/* ================================= */
+/* SIDEBAR */
+/* ================================= */
+
+.employee-sidebar {
+  width: 250px;
+  min-height: 100vh;
+
+  background: #111827;
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 28px 22px;
+  box-sizing: border-box;
+}
+
+
+/* ================================= */
+/* SIDEBAR BRAND */
+/* ================================= */
+
+.sidebar-brand {
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+
+  /* Reduced space below brand */
+  margin-bottom: 32px;
+}
+
+
+.sidebar-logo {
+  width: 50px;
+  height: 50px;
+
+  background: white;
+  color: #111827;
+
+  border-radius: 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 18px;
+  font-weight: 800;
+
+  flex-shrink: 0;
+}
+
+
+.sidebar-brand h2 {
+  margin: 0;
+
+  font-size: 18px;
+  font-weight: 800;
+
+  letter-spacing: 0.5px;
+}
+
+
+.sidebar-brand span {
+  display: block;
+
+  margin-top: 4px;
+
+  font-size: 12px;
+
+  color: #9ca3af;
+}
+
+
+/* ================================= */
+/* SIDEBAR NAVIGATION */
+/* ================================= */
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+}
+
+
+/* MANAGEMENT TITLE */
+
+.nav-section-title {
+  margin: 0 0 8px 14px;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  color: #6b7280;
+
+  letter-spacing: 0.8px;
+}
+
+
+/* ================================= */
+/* NAVIGATION BUTTONS */
+/* ================================= */
+
+.nav-item {
+  width: 100%;
+
+  border: none;
+  background: transparent;
+
+  color: #ffffff;
+
+  cursor: pointer;
+
+  text-align: left;
+
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 600;
+
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+
+  padding: 10px 16px;
+
+  border-radius: 10px;
+
+  /* Small gap between options */
+  margin-bottom: 3px;
+
+  box-sizing: border-box;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+
+/* ICON */
+
+.nav-item span:first-child {
+  width: 22px;
+  min-width: 22px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 16px;
+}
+
+
+/* TEXT */
+
+.nav-item span:last-child {
+  line-height: 1.35;
+}
+
+
+/* HOVER */
+
+.nav-item:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+
+/* ACTIVE */
+
+.nav-item.active {
+  background: #ffffff;
+
+  color: #111827;
+
+  box-shadow:
+    0 8px 20px rgba(0, 0, 0, 0.18);
+}
+
+
+/* ================================= */
+/* LOGOUT */
+/* ================================= */
+
+.sidebar-logout {
+  margin-top: auto;
+
+  width: 100%;
+
+  padding: 13px 14px;
+
+  border-radius: 10px;
+
+  border: 1px solid #374151;
+
+  background: transparent;
+
+  color: white;
+
+  cursor: pointer;
+
+  font-family: inherit;
+
+  font-size: 15px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 6px;
+
+  box-sizing: border-box;
+
+  transition: background 0.2s ease;
+}
+
+
+.sidebar-logout:hover {
+  background: #1f2937;
+}
+
+
+/* ================================= */
+/* MAIN CONTENT */
+/* ================================= */
+
+.employee-main {
+  flex: 1;
+
+  min-width: 0;
+
+  padding: 35px 42px;
+
+  box-sizing: border-box;
+}
+
+
+/* ================================= */
+/* HEADER */
+/* ================================= */
+
+.employee-header {
+  display: flex;
+
+  align-items: flex-start;
+
+  justify-content: space-between;
+
+  margin-bottom: 30px;
+}
+
+
+.page-label {
+  font-size: 12px;
+
+  font-weight: 700;
+
+  color: #64748b;
+
+  letter-spacing: 0.8px;
+
+  margin-bottom: 10px;
+}
+
+
+.employee-header h1 {
+  margin: 0;
+
+  font-size: 34px;
+
+  line-height: 1.2;
+
+  color: #10233f;
+}
+
+
+.employee-header p {
+  margin: 10px 0 0;
+
+  color: #64748b;
+
+  font-size: 16px;
+}
+
+
+/* ================================= */
+/* USER PROFILE */
+/* ================================= */
+
+.user-profile {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+}
+
+
+.user-avatar {
+  width: 48px;
+  height: 48px;
+
+  border-radius: 50%;
+
+  background: #e5e7eb;
+
+  color: #4f46e5;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  font-size: 18px;
+
+  font-weight: 700;
+
+  flex-shrink: 0;
+}
+
+
+.user-profile strong {
+  display: block;
+
+  font-size: 14px;
+
+  color: #111827;
+}
+
+
+.user-profile span {
+  display: block;
+
+  margin-top: 4px;
+
+  font-size: 12px;
+
+  color: #64748b;
+}
+
+
+/* ================================= */
+/* RESPONSIVE - TABLET */
+/* ================================= */
+
+@media (max-width: 1000px) {
+
+  .employee-sidebar {
+    width: 220px;
+  }
+
+  .employee-main {
+    padding: 28px;
+  }
+
+}
+
+
+/* ================================= */
+/* RESPONSIVE - SMALL TABLET */
+/* ================================= */
+
+@media (max-width: 750px) {
+
+  .employee-sidebar {
+    width: 200px;
+  }
+
+  .employee-main {
+    padding: 24px;
+  }
+
+  .employee-header h1 {
+    font-size: 28px;
+  }
+
+  .employee-header p {
+    font-size: 14px;
+  }
+
+}
+
+
+/* ================================= */
+/* RESPONSIVE - MOBILE */
+/* ================================= */
+
+@media (max-width: 600px) {
+
+  .employee-dashboard {
+    flex-direction: column;
+  }
+
+
+  .employee-sidebar {
+    width: 100%;
+
+    min-height: auto;
+
+    padding: 20px;
+  }
+
+
+  .sidebar-brand {
+    margin-bottom: 24px;
+  }
+
+
+  .sidebar-nav {
+    margin-bottom: 18px;
+  }
+
+
+  .sidebar-logout {
+    margin-top: 8px;
+  }
+
+
+  .employee-main {
+    padding: 24px 18px;
+  }
+
+
+  .employee-header {
+    flex-direction: column;
+
+    gap: 20px;
+  }
+
+}
